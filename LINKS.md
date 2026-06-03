@@ -20,11 +20,35 @@ Organized directory of all SuperInstance repositories.
 |------|-------------|
 | [PLATO](https://github.com/SuperInstance/PLATO) | Rooms, ensigns, distillation, multi-agent coordination |
 
+## Induction — open-mind
+
+| Repo | Description |
+|------|-------------|
+| [open-mind](https://github.com/SuperInstance/open-mind) | Induction engine, tripartite synchronizer, code-to-knowledge pipeline |
+
 ## Identity — git-native agents
 
 | Repo | Description |
 |------|-------------|
 | [agent-template](https://github.com/SuperInstance/agent-template) | Forkable template for git-native agents |
+
+## Terminal — intelligent-terminal
+
+| Repo | Description |
+|------|-------------|
+| [intelligent-terminal](https://github.com/SuperInstance/intelligent-terminal) | Tripartite-classified terminal subsystem, 26 functions induced |
+
+## Verification — conservation-spectral-topology-rs
+
+| Repo | Description |
+|------|-------------|
+| [conservation-spectral-topology-rs](https://github.com/SuperInstance/conservation-spectral-topology-rs) | Rust conservation law verification, spectral topology analysis |
+
+## Coordination — captains-log
+
+| Repo | Description |
+|------|-------------|
+| [captains-log](https://github.com/SuperInstance/captains-log) | Cross-repo coordination, session tracking, ecosystem state |
 
 ## Meta
 

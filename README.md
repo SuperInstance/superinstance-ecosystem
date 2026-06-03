@@ -114,12 +114,14 @@ A full-stack agent uses **35-140x fewer tokens** than naive LLM→shell executio
 ## What Ships vs. What's Planned
 
 **Ships today:**
-- lever-runner: parameterized commands, skill packs, Docker, web dashboard
+- lever-runner: parameterized commands, skill packs, Docker, web dashboard, 142 tests
 - pincherOS: reflex matching, `.nail` migration, 130 tests passing
+- open-mind: induction engine, tripartite synchronizer, conservation verification
+- agent-template: forkable git-native agent template
+- intelligent-terminal: tripartite-classified subsystems
+- conservation-spectral-topology-rs: Rust conservation law verification
 
 **In progress:**
-- lever-runner ↔ pincherOS bridge (`.nail` export)
-- agent-template for git-native agents
 - PLATO room adapter
 
 **Planned:**
@@ -128,6 +130,27 @@ A full-stack agent uses **35-140x fewer tokens** than naive LLM→shell executio
 - Edge deployment (Raspberry Pi)
 - Agent marketplace
 
+## Real Induction Results
+
+Live numbers from automated codebase analysis via the open-mind induction engine:
+
+| Repo | Functions | Vectors | Call Graph |
+|------|-----------|---------|------------|
+| lever-runner | 221 | 221 | 918 |
+| pincherOS | 113 | 113 | 308 |
+| intelligent-terminal | 26 | 26 | 82 |
+
+### Conservation Law Verification
+
+| Metric | Value |
+|--------|-------|
+| Ecosystem health | 0.78 / 1.00 |
+| PLATO utilization | 94.7% (bottleneck) |
+| Conservation leakage | 0 (verified) |
+| Algebraic connectivity | 1.382 |
+
+Total: **22 agents** run across ecosystem, **327+ tests** passing.
+
 ## Repos
 
 | Repo | Layer | Status |
@@ -135,7 +158,11 @@ A full-stack agent uses **35-140x fewer tokens** than naive LLM→shell executio
 | [lever-runner](https://github.com/SuperInstance/lever-runner) | Execution | Shipping |
 | [pincherOS](https://github.com/SuperInstance/pincherOS) | Memory | Shipping |
 | [PLATO](https://github.com/SuperInstance/PLATO) | Intelligence | In development |
-| [agent-template](https://github.com/SuperInstance/agent-template) | Identity | Planned |
+| [agent-template](https://github.com/SuperInstance/agent-template) | Identity | Shipping |
+| [open-mind](https://github.com/SuperInstance/open-mind) | Induction | Shipping |
+| [intelligent-terminal](https://github.com/SuperInstance/intelligent-terminal) | Terminal | Shipping |
+| [conservation-spectral-topology-rs](https://github.com/SuperInstance/conservation-spectral-topology-rs) | Verification | Shipping |
+| [captains-log](https://github.com/SuperInstance/captains-log) | Coordination | Shipping |
 | [superinstance-ecosystem](https://github.com/SuperInstance/superinstance-ecosystem) | Meta | This repo |
 
 ## License
