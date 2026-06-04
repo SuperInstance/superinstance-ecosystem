@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "SuperInstance cross-language test vectors - BLAKE3 + float32 LE",
+  "description": "SuperInstance cross-language test vectors - BLAKE2b-128 + float32 LE",
   "generated": "2026-06-03T22:11:00-08:00",
   "actions": [
     "north",
@@ -31,7 +31,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "af1349b9f5f9a1a6a0404dea36dcc949",
+      "expected_hash_hex": "cae66941d9efbd404e4d88758ea67670",
       "best_action": "north",
       "best_action_index": 0,
       "best_score": 0.5
@@ -58,7 +58,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "ea8f163db38682925e4491c5e58d4bb3",
+      "expected_hash_hex": "46fb7408d4f285228f4af516ea25851b",
       "best_action": "east",
       "best_action_index": 1,
       "best_score": 1.0
@@ -85,7 +85,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "c05ce8a1d72076f88e37c16a390c8317",
+      "expected_hash_hex": "75d42cb75f1d04b6cdee14b8065041d0",
       "best_action": "tie (all 0.5)",
       "best_action_index": -1,
       "best_score": 0.5
@@ -112,7 +112,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "ac313d566be1727caf7e70a6d1703751",
+      "expected_hash_hex": "6aa1971ba80e2d9fbacb22c2315fe9f7",
       "best_action": "east",
       "best_action_index": 1,
       "best_score": 3.14159
@@ -139,7 +139,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "7c3315da05fb3efdb42f5272bd67fe14",
+      "expected_hash_hex": "5b5b877ed46336153f8580dd503f266a",
       "best_action": "tie (all 0.0)",
       "best_action_index": -1,
       "best_score": 0.0
@@ -166,7 +166,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "5964dd158401e45648111c39d9a819f8",
+      "expected_hash_hex": "d88a6abce3406aca046bd863bc5ad34e",
       "best_action": "north",
       "best_action_index": 0,
       "best_score": 1.0001
@@ -193,7 +193,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "891401b065bed0568fb51eca8fe56ab4",
+      "expected_hash_hex": "690fa5aded3d16d3815e0dae479346bc",
       "best_action": "west",
       "best_action_index": 3,
       "best_score": 1.0
@@ -220,7 +220,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "44a528dfe8597e554f0bc5e3b5e06a99",
+      "expected_hash_hex": "2f0926c19e3836661b91ea93e57ca4ea",
       "best_action": "north",
       "best_action_index": 0,
       "best_score": 9.8
@@ -247,7 +247,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "fdf0a62541fd6caf40f8db3876df9e1a",
+      "expected_hash_hex": "71cb317c174bd4d11909f6326cd71183",
       "best_action": "south",
       "best_action_index": 2,
       "best_score": 1.0
@@ -274,7 +274,7 @@
         "south",
         "west"
       ],
-      "expected_hash_hex": "692be2e4e75070f7de6de0a67ec22a8c",
+      "expected_hash_hex": "811277967e7e8064f8dedf5539c14ae5",
       "best_action": "tie (all 0.0)",
       "best_action_index": -1,
       "best_score": 0.0

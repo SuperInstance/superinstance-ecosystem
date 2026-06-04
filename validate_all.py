@@ -8,7 +8,7 @@ import json
 import struct
 import sys
 import os
-import blake3
+import hashlib
 import math
 from pathlib import Path
 
@@ -31,7 +31,7 @@ def validate_python(data):
     actions = data["actions"]
 
     print("═" * 60)
-    print("🐍 Python Validation (tile-compiler)")
+    print("🐍 Python Validation (tile-compiler) — BLAKE2b-128")
     print("═" * 60)
 
     for v in data["vectors"]:
@@ -42,8 +42,8 @@ def validate_python(data):
         expected_hash = v["expected_hash_hex"]
         score_hex = v["score_bytes_hex"]
 
-        # Test 1: BLAKE3 hash
-        computed_hash = blake3.blake3(state.encode("utf-8")).digest(length=16).hex()
+        # Test 1: BLAKE2b-128 hash
+        computed_hash = hashlib.blake2b(state.encode("utf-8"), digest_size=16).hexdigest()
         if computed_hash == expected_hash:
             pass_hash = True
         else:
@@ -99,7 +99,7 @@ def validate_python(data):
         conf_ok = 0.0 <= g["expected_confidence"] <= 1.0
 
         # Simulate gate logic: hash the state for lookup
-        state_hash = blake3.blake3(state.encode("utf-8")).digest(length=16).hex()
+        state_hash = hashlib.blake2b(state.encode("utf-8"), digest_size=16).hexdigest()
         ok = threshold_ok and gate_valid and conf_ok
         status = "✅" if ok else "❌"
         results["pass" if ok else "fail"] += 1
@@ -130,11 +130,11 @@ def generate_rust_tests(data):
 
     # Generate hash test vectors
     lines.append('    #[test]')
-    lines.append('    fn test_blake3_hashes() {')
+    lines.append('    fn test_blake2b_hashes() {')
     for v in data["vectors"]:
         escaped = v["state"].replace('\\', '\\\\').replace('"', '\\"')
         lines.append(f'        assert_eq(')
-        lines.append(f'            blake3_128("{escaped}"),')
+        lines.append(f'            blake2b_128("{escaped}"),')
         lines.append(f'            "{v["expected_hash_hex"]}",')
         lines.append(f'            "Hash mismatch for {v["id"]} (\"{escaped}\") "')
         lines.append(f'        );')
@@ -302,7 +302,7 @@ def generate_js_tests(data):
     lines.append('')
     lines.append('const testVectors = require("../superinstance-ecosystem/test-vectors.json");')
     lines.append('')
-    lines.append('const { blake3 } = require("blake3"); // or appropriate import')
+    lines.append('const { createHash } = require("crypto"); // Node.js built-in BLAKE2b')
     lines.append('')
 
     lines.append('function hexToBytes(hex) {')
@@ -333,10 +333,10 @@ def generate_js_tests(data):
     lines.append('')
 
     # Hash tests
-    lines.append('    // BLAKE3 hash tests')
+    lines.append('    // BLAKE2b-128 hash tests')
     lines.append('    for (const v of data.vectors) {')
     lines.append('        const input = Buffer.from(v.state, "utf-8");')
-    lines.append('        const hash = blake3.hash(input).toString("hex").slice(0, 32); // 128-bit = 32 hex chars')
+    lines.append('        const hash = createHash("blake2b512").update(input).digest("hex").slice(0, 32); // 128-bit = 32 hex chars')
     lines.append('        if (hash === v.expected_hash_hex) {')
     lines.append('            pass++;')
     lines.append('        } else {')
