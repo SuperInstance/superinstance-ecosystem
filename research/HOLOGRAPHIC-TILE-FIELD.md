@@ -181,8 +181,18 @@ Hold'em is the perfect holographic game:
 | Tile vs Random (Hold'em) | 2026-06-03 | +4.6pp | Smallest advantage — vast negative space |
 | Tile Conservation (TTT) | 2026-06-03 | CV=0.0019 | Negative space conserved, positive space free |
 | Reflex Evolution v2 | 2026-06-03 | No polarization | Decoupled reward + temp decay fixes v1 |
-| Rival Intelligence | 2026-06-03 | Divergent | Arms race doesn't converge, bluffing emerges |
+| Rival Intelligence (2P) | 2026-06-03 | Divergent | Arms race doesn't converge, bluffing emerges |
+| Rival Intelligence (3P) | 2026-06-03 | 1.91× divergence | 3-player amplifies divergence, no equilibrium |
 | Hold'em Strategy | 2026-06-03 | raise_small dominant | Self-similar across all stages |
+| Penrose Formalization | 2026-06-03 | Fractal dim 0.84/0.85/0.55 | TTT/C4 structured, Hold'em less fractal |
+| Inverse Scaling Law | 2026-06-03 | α=-0.30 | More complex games → tighter conservation |
+| Holographic Bound (TTT) | 2026-06-03 | 5 tiles = 99.8% | O(√N) conjecture too conservative for TTT |
+| Holographic Transfer (TTT→C4) | 2026-06-03 | +0.6pp | Negative space carries signal across games |
+| Anti-Transfer (inverted) | 2026-06-03 | -1.7pp | Wrong negative space hurts — signal is real |
+| Deception Layer | 2026-06-03 | Mutual=49.8/49.0 | Both reading = fair game |
+| B reads A | 2026-06-03 | +0.9pp for B | The keen eye advantage |
+| Adaptive Deception | 2026-06-03 | 48.4% | Moving target closes the gap |
+| Evolution v2 (C4) | 2026-06-03 | 94.2% win rate | Zero exploration + exploit center |
 
 ## 8. References to SuperInstance Architecture
 
