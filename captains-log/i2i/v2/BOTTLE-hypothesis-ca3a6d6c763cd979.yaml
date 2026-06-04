@@ -1,0 +1,14 @@
+apiVersion: bottle/v1
+kind: hypothesis
+source: forgemaster
+timestamp: '2026-06-04T01:58:03.675859+00:00'
+bottle_id: ca3a6d6c763cd979
+payload:
+  hypothesis: position-aware embeddings will outperform pure hash for command matching
+  evidence:
+  - 44% top-1 vs 0% in initial benchmark
+metadata:
+  confidence: 0.7
+  tags:
+  - hypothesis
+  references: []

@@ -35,16 +35,18 @@ for REPO in "${REPOS[@]}"; do
         OUTPUT=$(cargo test 2>&1) || true
         PASSED=$(echo "$OUTPUT" | grep -oP '\d+ passed' | head -1 | grep -oP '\d+' || echo "0")
         FAILED=$(echo "$OUTPUT" | grep -oP '\d+ failed' | head -1 | grep -oP '\d+' || echo "0")
-        WARNINGS=$(echo "$OUTPUT" | grep -c "warning" || echo "0")
-        echo "  Rust: $PASSED passed, $FAILED failed, $WARNINGS warnings"
+        WARNINGS=$(echo "$OUTPUT" | grep -c "warning" || true)
+        echo "  Rust: $PASSED passed, $FAILED failed, ${WARNINGS:-0} warnings"
     elif [ -f "pyproject.toml" ] || [ -f "setup.py" ] || [ -f "src/__init__.py" ]; then
         # Python project
         if [ -d ".venv" ]; then
             source .venv/bin/activate
         fi
-        OUTPUT=$(python3 -m pytest tests/ -q --tb=no 2>&1) || true
-        PASSED=$(echo "$OUTPUT" | grep -oP '\d+ passed' | head -1 | grep -oP '\d+' || echo "0")
-        FAILED=$(echo "$OUTPUT" | grep -oP '\d+ failed' | head -1 | grep -oP '\d+' || echo "0")
+        OUTPUT=$(python3 -m pytest tests/ --tb=no 2>&1) || true
+        PASSED=$(echo "$OUTPUT" | grep -oP '\d+(?= passed)' | tail -1 || echo "0")
+        FAILED=$(echo "$OUTPUT" | grep -oP '\d+(?= failed)' | tail -1 || echo "0")
+        PASSED=${PASSED:-0}
+        FAILED=${FAILED:-0}
         echo "  Python: $PASSED passed, $FAILED failed"
     else
         echo "  Unknown project type"

@@ -1,0 +1,16 @@
+apiVersion: bottle/v1
+kind: observation
+source: forgemaster
+timestamp: '2026-06-04T01:58:03.675826+00:00'
+bottle_id: 6b502db1ce06ac5d
+payload:
+  what: spectral similarity between repos is >0.97
+  cosine_sim: 0.97
+  repos_compared: 3
+metadata:
+  confidence: 0.94
+  tags:
+  - observation
+  - spectral
+  - cross-repo
+  references: []

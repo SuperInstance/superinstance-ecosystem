@@ -1,0 +1,16 @@
+apiVersion: bottle/v1
+kind: observation
+source: metal-lathe
+timestamp: '2026-06-04T01:58:03.675863+00:00'
+bottle_id: a7f0765fd949509c
+payload:
+  what: cache hit rate at 44% after one week
+  hit_rate: 0.44
+  commands_seen: 1000
+metadata:
+  confidence: 0.9
+  tags:
+  - observation
+  - cache
+  - metrics
+  references: []

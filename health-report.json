@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-06-04T01:56:01Z",
-  "total_tests": 0,
-  "total_passed": 0,
+  "timestamp": "2026-06-04T01:58:12Z",
+  "total_tests": 232,
+  "total_passed": 232,
   "total_failed": 0,
-  "health_score": 0.0,
-  "repos": [{"repo":"lever-runner","passed":0,"failed":0}]
+  "health_score": 1.0,
+  "repos": [{"repo":"lever-runner","passed":149,"failed":0},{"repo":"pincherOS","passed":0,"failed":0},{"repo":"zeroclaw-arena","passed":0,"failed":0},{"repo":"fastloop-guard","passed":28,"failed":0},{"repo":"conservation-spectral-topology-rs","passed":55,"failed":0},{"repo":"metal-lathe","passed":0,"failed":0},{"repo":"agent-template","passed":0,"failed":0}]
 }
