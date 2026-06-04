@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "description": "SuperInstance cross-language test vectors - BLAKE3 + float32 LE",
+  "generated": "2026-06-03T22:11:00-08:00",
+  "actions": [
+    "north",
+    "east",
+    "south",
+    "west"
+  ],
+  "vectors": [
+    {
+      "id": "v0",
+      "state": "",
+      "scores": [
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score_bytes_hex": "0000003f000000000000000000000000",
+      "visits": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "af1349b9f5f9a1a6a0404dea36dcc949",
+      "best_action": "north",
+      "best_action_index": 0,
+      "best_score": 0.5
+    },
+    {
+      "id": "v1",
+      "state": "hello",
+      "scores": [
+        0.2,
+        1.0,
+        0.3,
+        0.0
+      ],
+      "score_bytes_hex": "cdcc4c3e0000803f9a99993e00000000",
+      "visits": [
+        5,
+        20,
+        3,
+        0
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "ea8f163db38682925e4491c5e58d4bb3",
+      "best_action": "east",
+      "best_action_index": 1,
+      "best_score": 1.0
+    },
+    {
+      "id": "v2",
+      "state": "action:north",
+      "scores": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "score_bytes_hex": "0000003f0000003f0000003f0000003f",
+      "visits": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "c05ce8a1d72076f88e37c16a390c8317",
+      "best_action": "tie (all 0.5)",
+      "best_action_index": -1,
+      "best_score": 0.5
+    },
+    {
+      "id": "v3",
+      "state": "state:grid[3,7];prev:east",
+      "scores": [
+        0.75,
+        3.14159,
+        0.0,
+        0.9
+      ],
+      "score_bytes_hex": "0000403fd00f4940000000006666663f",
+      "visits": [
+        7,
+        100,
+        0,
+        12
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "ac313d566be1727caf7e70a6d1703751",
+      "best_action": "east",
+      "best_action_index": 1,
+      "best_score": 3.14159
+    },
+    {
+      "id": "v4",
+      "state": "state:grid[0,0];prev:null",
+      "scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score_bytes_hex": "00000000000000000000000000000000",
+      "visits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "7c3315da05fb3efdb42f5272bd67fe14",
+      "best_action": "tie (all 0.0)",
+      "best_action_index": -1,
+      "best_score": 0.0
+    },
+    {
+      "id": "v5",
+      "state": "embed:test_positive",
+      "scores": [
+        1.0001,
+        -1.0001,
+        0.0,
+        0.50000006
+      ],
+      "score_bytes_hex": "4703803f470380bf000000000100003f",
+      "visits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "5964dd158401e45648111c39d9a819f8",
+      "best_action": "north",
+      "best_action_index": 0,
+      "best_score": 1.0001
+    },
+    {
+      "id": "v6",
+      "state": "embed:test_negative",
+      "scores": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "score_bytes_hex": "0000000000000000000000000000803f",
+      "visits": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "891401b065bed0568fb51eca8fe56ab4",
+      "best_action": "west",
+      "best_action_index": 3,
+      "best_score": 1.0
+    },
+    {
+      "id": "v7",
+      "state": "gate:exact_match",
+      "scores": [
+        9.8,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "score_bytes_hex": "cdcc1c410000803f0000000000000000",
+      "visits": [
+        50,
+        10,
+        0,
+        0
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "44a528dfe8597e554f0bc5e3b5e06a99",
+      "best_action": "north",
+      "best_action_index": 0,
+      "best_score": 9.8
+    },
+    {
+      "id": "v8",
+      "state": "gate:fuzzy_match",
+      "scores": [
+        0.1,
+        0.1,
+        1.0,
+        0.1
+      ],
+      "score_bytes_hex": "cdcccc3dcdcccc3d0000803fcdcccc3d",
+      "visits": [
+        3,
+        3,
+        15,
+        3
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "fdf0a62541fd6caf40f8db3876df9e1a",
+      "best_action": "south",
+      "best_action_index": 2,
+      "best_score": 1.0
+    },
+    {
+      "id": "v9",
+      "state": "gate:semantic_miss",
+      "scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "score_bytes_hex": "00000000000000000000000000000000",
+      "visits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "actions": [
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "expected_hash_hex": "692be2e4e75070f7de6de0a67ec22a8c",
+      "best_action": "tie (all 0.0)",
+      "best_action_index": -1,
+      "best_score": 0.0
+    }
+  ],
+  "gate_pipeline_tests": [
+    {
+      "id": "v7",
+      "state": "gate:exact_match",
+      "threshold": 0.95,
+      "expected_gate": 1,
+      "expected_confidence": 1.0
+    },
+    {
+      "id": "v8a",
+      "state": "gate:fuzzy_match",
+      "threshold": 0.8,
+      "expected_gate": 2,
+      "expected_confidence": 0.85
+    },
+    {
+      "id": "v8b",
+      "state": "gate:fuzzy_match",
+      "threshold": 0.95,
+      "expected_gate": 0,
+      "expected_confidence": 0.0
+    },
+    {
+      "id": "v9a",
+      "state": "gate:semantic_miss",
+      "threshold": 0.6,
+      "expected_gate": 3,
+      "expected_confidence": 0.65
+    },
+    {
+      "id": "v9b",
+      "state": "gate:semantic_miss",
+      "threshold": 0.95,
+      "expected_gate": 0,
+      "expected_confidence": 0.0
+    },
+    {
+      "id": "v0",
+      "state": "",
+      "threshold": 0.95,
+      "expected_gate": 0,
+      "expected_confidence": 0.0
+    }
+  ],
+  "wire_format_test": {
+    "vector_id": "v2",
+    "n_tiles": 1,
+    "n_actions": 4,
+    "header_magic_hex": "54494c45",
+    "header_version": 1,
+    "expected_entry_size": 56,
+    "expected_total_padded": 256
+  }
+}
