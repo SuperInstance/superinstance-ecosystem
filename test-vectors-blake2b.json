@@ -1,0 +1,67 @@
+{
+  "algorithm": "BLAKE2b-128",
+  "digest_size": 16,
+  "decision": "BLAKE2b chosen for stdlib availability, MCU support, existing CUDA/Rust implementations",
+  "vectors": [
+    {
+      "id": 0,
+      "state": ".........",
+      "blake2b_128": "89fa3a927e254bea7218c405823999aa",
+      "state_length": 9
+    },
+    {
+      "id": 1,
+      "state": "X........",
+      "blake2b_128": "bd5885cc73b761cec505154b238f6234",
+      "state_length": 9
+    },
+    {
+      "id": 2,
+      "state": "XO.X.O.XO",
+      "blake2b_128": "33ecca5033d17fba55745ae13d73b461",
+      "state_length": 9
+    },
+    {
+      "id": 3,
+      "state": "XXX......",
+      "blake2b_128": "66c58ca508531138acbeee77d7eba49c",
+      "state_length": 9
+    },
+    {
+      "id": 4,
+      "state": "OOO......",
+      "blake2b_128": "2cd3b5ad916491d7077c4582e15bf053",
+      "state_length": 9
+    },
+    {
+      "id": 5,
+      "state": "X.OX.OX.O",
+      "blake2b_128": "2a0db01e3e1939602d78fe2ed0d4302d",
+      "state_length": 9
+    },
+    {
+      "id": 6,
+      "state": "XOXOXOXOX",
+      "blake2b_128": "97e3dd13e4a3b0e400eb37936fa6a27b",
+      "state_length": 9
+    },
+    {
+      "id": 7,
+      "state": "",
+      "blake2b_128": "cae66941d9efbd404e4d88758ea67670",
+      "state_length": 0
+    },
+    {
+      "id": 8,
+      "state": "a",
+      "blake2b_128": "27c35e6e9373877f29e562464e46497e",
+      "state_length": 1
+    },
+    {
+      "id": 9,
+      "state": " negotiation:accept ",
+      "blake2b_128": "c66444be4724b637789f86b75272b180",
+      "state_length": 20
+    }
+  ]
+}
