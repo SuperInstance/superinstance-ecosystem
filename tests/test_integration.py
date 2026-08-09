@@ -16,6 +16,8 @@ import sqlite3
 import subprocess
 import tempfile
 
+import pytest
+
 REPOS = {
     'lever-runner': os.path.expanduser('~/repos/lever-runner'),
     'pincherOS': os.path.expanduser('~/repos/pincherOS'),
@@ -42,6 +44,8 @@ def test_lever_runner_imports():
 
 def test_zeroclaw_imports():
     """Can ZeroClaw arena run?"""
+    if not repo_exists('zeroclaw-arena'):
+        pytest.skip("zeroclaw-arena repo not present")
     sys.path.insert(0, REPOS['zeroclaw-arena'])
     from zeroclaw import TicTacToe, Connect4, Go9x9
     ttt = TicTacToe()
@@ -55,6 +59,8 @@ def test_zeroclaw_imports():
 
 def test_zeroclaw_transfer_learning():
     """Does transfer learning work?"""
+    if not repo_exists('zeroclaw-arena'):
+        pytest.skip("zeroclaw-arena repo not present")
     sys.path.insert(0, REPOS['zeroclaw-arena'])
     from transfer_learning import TransferPlayer
     ttt_db = '/tmp/zeroclaw-sandbox/zeroclaw-tictactoe/vectors.db'
@@ -70,6 +76,8 @@ def test_zeroclaw_transfer_learning():
 
 def test_gpu_vector_engine():
     """Does the GPU vector engine work?"""
+    if not repo_exists('zeroclaw-arena'):
+        pytest.skip("zeroclaw-arena repo not present")
     sys.path.insert(0, REPOS['zeroclaw-arena'])
     from gpu_vector_engine import GPUVectorEngine
     engine = GPUVectorEngine(dim=64)
